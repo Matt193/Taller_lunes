@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Razas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-searchbar [(ngModel)]="searchText" (ionInput)="filterDogs()"></ion-searchbar>
+
+    <ion-item *ngFor="let dog of filteredDogs" (click)="goToDetail(dog)">
+      <img  [src]="'https://cdn2.thedogapi.com/images/' + dog.reference_image_id + '.jpg'" alt="{{ dog.name }}" />
+      <ion-item *ngFor="let dog of filteredDogs" (click)="goToDetail(dog)"></ion-item>
+      <ion-thumbnail slot="start">
+        <img [src]="dog.image?.url || 'assets/img/no-image.png'" alt="{{ dog.name }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ dog.name }}</h2>
+        <p>{{ dog.bred_for || 'Información no disponible' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
