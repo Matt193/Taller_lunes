@@ -29,4 +29,4 @@ Permite visualizar razas de perros con imágenes, descripciones y detalles adici
 
 ### **1️⃣ Clonar el repositorio**
 ```bash
-git clone https://github.com/Matthew193/Taller_lunes.git
+git clone https://github.com/Matt193/Taller_lunes.git
